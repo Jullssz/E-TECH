@@ -2,27 +2,33 @@ import React from 'react'
 import ItemListContainer from '../itemListContainer/ItemListContainer'
 import './style.css'
 
+const productos = [
+  {
+    titulo: 'PC GAMER',
+    descripcion: 'Descripcion',
+    imagen: './url',
+    botonComprar: 'Comprar',
+  },
+  {
+    titulo: 'Silla Gamer',
+    descripcion: 'Descripcion',
+    imagen: './url',
+    botonComprar: 'Comprar',
+  },
+  {
+    titulo: 'Teclado Nisuta',
+    descripcion: 'Descripcion',
+    imagen: './url',
+    botonComprar: 'Comprar',
+  }, 
+]
+
 export default function Cards() {
   return (
     <div className='d-flex flex-row justify-content-center'>
-        <ItemListContainer
-          titulo="PC GAMER"
-          descripcion="descripcion"
-          imagen="./url"
-          botonComprar="Comprar"
-        />
-        <ItemListContainer
-          titulo="Silla Gamer"
-          descripcion="descripcion"
-          imagen="./url"
-          botonComprar="Comprar"
-        />
-        <ItemListContainer
-          titulo="Teclado Nisuta"
-          descripcion="descripcion"
-          imagen="./url"
-          botonComprar="Comprar"
-        />
+      {productos.map((producto, index) => (
+        <ItemListContainer key={index} producto={producto} />
+      ))}
     </div>
   )
 }
