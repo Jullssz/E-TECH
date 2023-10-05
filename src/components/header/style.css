@@ -3,23 +3,5 @@
     display: flex;
     justify-content: space-around;
     justify-items: center;
-}
-
-
-.liHeader{
-    display: inline-block;
-    justify-content: center;
     align-items: center;
-    padding: 12px;
-    margin: 10px;
-}
-
-.aHeader{
-    text-decoration: none;
-    color: black;
-}
-
-.carrito{
-    background-color:darksalmon;
-    border: none;
 }
