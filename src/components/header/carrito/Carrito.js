@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import './style.css'
 import { AlmacenContext } from '../../../context/AlmacenContext'
+import './style.css'
 
 export default function Carrito() {
-    const { almacen, setAlmacen } = useContext(AlmacenContext)
+    const { productos } = useContext(AlmacenContext);
 
     return (
         <div className='divCarrito'>
@@ -15,7 +15,7 @@ export default function Carrito() {
                     </svg>
                 </NavLink>
             </button>
-            <p>{almacen.length}</p>
+            <p>{productos.length}</p>
         </div>
     )
 }

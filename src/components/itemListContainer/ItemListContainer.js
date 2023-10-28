@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Cardd from '../card/Card'
+import { AlmacenContext } from '../../context/AlmacenContext';
 import './style.css'
-import { productos } from '../almacenProductos/AlmacenProductos'
 
 export default function Cards() {
+  const { productos } = useContext(AlmacenContext);
 
   return (
     <div className='d-flex flex-row justify-content-center'>

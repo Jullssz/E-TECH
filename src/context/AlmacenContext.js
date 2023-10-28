@@ -1,3 +1,3 @@
 import { createContext } from "react";
 
-export const AlmacenContext = createContext({})
+export const AlmacenContext = createContext({ productos: [], setProductos: () => {} })

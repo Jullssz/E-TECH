@@ -1,7 +1,7 @@
 import React from 'react'
-import "./style.css"
 import Carrito from './carrito/Carrito'
 import NavBar from './navBar/NavBar'
+import "./style.css"
 
 export default function Header() {
   return (

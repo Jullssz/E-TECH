@@ -28,20 +28,3 @@ export default function Checkout() {
   </div>
   )
 }
-
-
-/* <div>
-<h2>Checkout</h2>
-<form>
-  <label htmlFor="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre" />
-
-  <label htmlFor="email">Email:</label>
-  <input type="email" id="email" name="email" />
-
-  <label htmlFor="telefono">Teléfono:</label>
-  <input type="tel" id="telefono" name="telefono" />
-
-  <button type="submit">Confirmar Compra</button>
-</form>
-</div> */

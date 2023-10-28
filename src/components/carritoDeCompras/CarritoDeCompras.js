@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import './style.css';
 
 export default function CarritoDeCompras() {
-    const { almacen } = useContext(AlmacenContext);
-    const totalPrecio = almacen.reduce((total, producto) => total + producto.precio, 0);
+    const { productos } = useContext(AlmacenContext);
+    const totalPrecio = productos.reduce((total, producto) => total + producto.precio, 0);
     const confirmarCompra = () => {
 
     };
@@ -13,7 +13,7 @@ export default function CarritoDeCompras() {
         <div className='divCarritoDeCompras'>
             <h2 className='tituloCarritoDeCompras'>Tu Carro</h2>
             <div className='tarjetasContainer'>
-                {almacen.map((producto, index) => (
+                {productos.map((producto, index) => (
                     <div key={index} className='tarjetaProducto'>
                         <img className='imagenCarritoDeCompras' src={producto.imagen} alt={producto.titulo} />
                         <p className='nombreProducto'>{producto.titulo}</p>
@@ -30,4 +30,3 @@ export default function CarritoDeCompras() {
         </div>
     );
 }
-
