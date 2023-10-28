@@ -1,0 +1,43 @@
+.tituloCarritoDeCompras {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin: 13px;
+}
+
+.divCarritoDeCompras {
+  text-align: center;
+}
+
+.tituloCarritoDeCompras {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tarjetasContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjetaProducto {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+  text-align: center;
+}
+
+.imagenCarritoDeCompras {
+  width: 100px;
+  height: 100px;
+}
+
+.nombreProducto {
+  font-weight: bold;
+}
+
+.precioProducto {
+  font-weight: bold;
+  color: #007bff;
+}

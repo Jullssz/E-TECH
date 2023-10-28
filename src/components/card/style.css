@@ -1,0 +1,30 @@
+.titulo{
+  font-size: 18px;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+}
+
+.descripcionPrecioDiv {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  max-width: 280px;
+  max-height: 60px;
+  font-size: 18px;
+}
+
+.descripcion{
+    font-style: italic;
+}
+
+.precio{
+    color: brown;
+}
+
+
+

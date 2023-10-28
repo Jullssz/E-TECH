@@ -1,27 +1,15 @@
 import React from 'react'
+import Cardd from '../card/Card'
 import './style.css'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+import { productos } from '../almacenProductos/AlmacenProductos'
 
-export default function ItemListContainer({ producto }) {
-  const { titulo, descripcion, imagen, botonComprar } = producto
+export default function Cards() {
 
   return (
-
-    <div>
-    <Link to={`/productos/${encodeURIComponent(titulo)}`}>
-      <Card className='m-4' border='primary' style={{ width: '20rem' }}>
-          <Card.Img variant="top" src={imagen} />
-          <Card.Body>
-            <Card.Title>{titulo}</Card.Title>
-            <Card.Text>
-              {descripcion}
-            </Card.Text>
-          <Button variant="primary">{botonComprar}</Button>
-        </Card.Body>
-      </Card>
-    </Link >
-    </div> 
-  ); 
+    <div className='d-flex flex-row justify-content-center'>
+      {productos.map((producto, index) => (
+        <Cardd key={index} producto={producto} />
+      ))}
+    </div>
+  )
 }

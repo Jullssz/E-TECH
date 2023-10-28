@@ -6,7 +6,6 @@ export default function HeaderConFooter({ children }) {
     return (
         <>
             <Header />
-
             {children}
             <footer className='footer'>
                 <span className='footerSpan'>

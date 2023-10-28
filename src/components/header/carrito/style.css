@@ -3,3 +3,7 @@
     border: none;
     text-decoration: none;
 }
+
+.divCarrito{
+    display: flex;
+}

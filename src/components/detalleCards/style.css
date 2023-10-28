@@ -1,0 +1,20 @@
+.detalleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalleTitulo{
+  padding: 8px;
+  margin: 13px;
+}
+
+.detalleDivDescripcion {
+  display: flex;
+  align-items: flex-start;
+}
+
+.detallePrecio {
+  color: red;
+  font-size: 1.5rem;
+}
