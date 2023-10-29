@@ -1,0 +1,23 @@
+.divConfirmacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.idConfirmacion{
+    font-style: italic;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.pConfirmacion{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.botonConfirmacionDiv{
+    padding: 10px;
+    margin: 10px;
+}

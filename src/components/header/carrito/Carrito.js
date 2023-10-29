@@ -4,7 +4,7 @@ import { AlmacenContext } from '../../../context/AlmacenContext'
 import './style.css'
 
 export default function Carrito() {
-    const { productos } = useContext(AlmacenContext);
+    const { carrito } = useContext(AlmacenContext);
 
     return (
         <div className='divCarrito'>
@@ -15,7 +15,7 @@ export default function Carrito() {
                     </svg>
                 </NavLink>
             </button>
-            <p>{productos.length}</p>
+            <p>{carrito.length}</p>
         </div>
     )
 }

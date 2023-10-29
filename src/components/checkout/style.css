@@ -1,8 +1,8 @@
-.tituloCheckout{
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-    margin: 13px;
+.tituloCheckout {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin: 13px;
 }
 
 .formContainer {

@@ -1,7 +1,7 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
+import { Link } from 'react-router-dom'
 import './style.css'
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 
 export default function Cardd({ producto }) {
   const { titulo, descripcion, imagen, precio } = producto
@@ -26,5 +26,5 @@ export default function Cardd({ producto }) {
         </Card.Body>
       </Card>
     </div>
-  );
+  )
 }

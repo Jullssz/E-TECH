@@ -1,7 +1,7 @@
-.header{
-    background-color:darksalmon;
-    display: flex;
-    justify-content: space-around;
-    justify-items: center;
-    align-items: center;
+.header {
+  background-color: darksalmon;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
 }

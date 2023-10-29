@@ -1,0 +1,49 @@
+.carritoCard {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.carritoCardContent {
+  display: flex;
+  width: 100%;
+}
+
+.carritoCardImagen {
+  flex: 0 0 100px;
+  margin-right: 20px;
+}
+
+.carritoCardImagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carritoCardInfo {
+  flex: 1;
+}
+
+.carritoCardTitulo {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.carritoCardDescripcion {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.carritoCardPrecio {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}

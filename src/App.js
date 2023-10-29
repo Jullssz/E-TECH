@@ -9,6 +9,7 @@ import DetalleCards from './components/detalleCards/DetalleCards';
 import ContextProvider from './components/contextProvider/ContextProvider';
 import CarritoDeCompras from './components/carritoDeCompras/CarritoDeCompras';
 import Checkout from './components/checkout/Checkout';
+import Confirmacion from './components/confirmacion/Confirmacion';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='/productos/:id' element={<DetalleCards />} />
             <Route path='/carrito' element={<CarritoDeCompras />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/confirmacion/:idOperacion' element={<Confirmacion />} />
           </Routes>
         </HeaderConFooter>
       </BrowserRouter>

@@ -1,30 +1,43 @@
-import React, { useContext } from 'react';
-import { AlmacenContext } from '../../context/AlmacenContext';
-import { Link } from 'react-router-dom';
-import './style.css';
+import React, { useContext, useState } from 'react'
+import { AlmacenContext } from '../../context/AlmacenContext'
+import { Link } from 'react-router-dom'
+import CarritoCard from '../carritoCard/CarritoCard'
+import Boton from '../boton/Boton'
+import './style.css'
 
 export default function CarritoDeCompras() {
-    const { productos } = useContext(AlmacenContext);
-    const totalPrecio = productos.reduce((total, producto) => total + producto.precio, 0);
-    const confirmarCompra = () => {
+    const { carrito } = useContext(AlmacenContext)
+    const [mensaje, setMensaje] = useState('')
+    const [mostrarMensaje, setMostrarMensaje] = useState(false)
 
-    };
+    const totalPrecio = carrito.reduce((total, producto) => total + producto.precio, 0)
+    const confirmarCompra = () => {
+        if (carrito.length > 0) {
+
+        } else {
+            setMensaje('No hay productos en el carrito. Agrega productos antes de confirmar la compra.');
+            setMostrarMensaje(true);
+        }
+    }
+
     return (
         <div className='divCarritoDeCompras'>
             <h2 className='tituloCarritoDeCompras'>Tu Carro</h2>
             <div className='tarjetasContainer'>
-                {productos.map((producto, index) => (
-                    <div key={index} className='tarjetaProducto'>
-                        <img className='imagenCarritoDeCompras' src={producto.imagen} alt={producto.titulo} />
-                        <p className='nombreProducto'>{producto.titulo}</p>
-                        <p className='precioProducto'>${producto.precio}</p>
-                    </div>
+                {carrito.map((producto, index) => (
+                    <CarritoCard key={index} producto={producto}>
+                    </CarritoCard>
                 ))}
             </div>
+            {mostrarMensaje && (
+                <div>
+                    <p>{mensaje}</p>
+                </div>
+            )}
             <div className='totalPrecio'>
-                <p>Total: ${totalPrecio.toFixed(2)}</p>
-                <Link to="/checkout">
-                <button className='botonConfirmarCompra' onClick={confirmarCompra}>Confirmar Compra</button>
+                <Link to={"/checkout"}>
+                    <p>Total: ${totalPrecio.toFixed(2)}</p>
+                    <Boton className='botonConfirmarCompra' titulo="Confirmar Compra" funcion={confirmarCompra} />
                 </Link>
             </div>
         </div>

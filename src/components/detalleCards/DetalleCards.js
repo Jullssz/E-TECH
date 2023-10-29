@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import { AlmacenContext } from '../../context/AlmacenContext';
-import Boton from '../boton/Boton';
-import Card from 'react-bootstrap/Card';
+import Boton from '../boton/Boton'
+import Card from 'react-bootstrap/Card'
 import './style.css'
 
 export default function DetalleCards() {
-    const { productos, setProductos } = useContext(AlmacenContext)
+    const { productos, carrito, setCarrito } = useContext(AlmacenContext)
     const { id } = useParams()
     const producto = productos.find((producto) => producto.id === id)
 
@@ -15,7 +15,9 @@ export default function DetalleCards() {
     }
 
     const Comprar = () => {
-        setProductos([...productos, producto])
+        if (!carrito.some((p) => p.id === producto.id)) {
+            setCarrito([...carrito, producto])
+        }
     }
 
     return (

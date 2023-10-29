@@ -1,9 +1,9 @@
-.carrito{
-    background-color:darksalmon;
-    border: none;
-    text-decoration: none;
+.carrito {
+  background-color: darksalmon;
+  border: none;
+  text-decoration: none;
 }
 
-.divCarrito{
-    display: flex;
+.divCarrito {
+  display: flex;
 }

@@ -1,4 +1,4 @@
-.titulo{
+.titulo {
   font-size: 18px;
 }
 
@@ -18,13 +18,10 @@
   font-size: 18px;
 }
 
-.descripcion{
-    font-style: italic;
+.descripcion {
+  font-style: italic;
 }
 
-.precio{
-    color: brown;
+.precio {
+  color: brown;
 }
-
-
-
