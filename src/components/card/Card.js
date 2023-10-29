@@ -5,22 +5,24 @@ import './style.css'
 
 export default function Cardd({ producto }) {
   const { titulo, descripcion, imagen, precio } = producto
-  
+
+  const imagenUrl = `https://firebasestorage.googleapis.com/v0/b/e-tech-d3586.appspot.com/o/${encodeURIComponent(imagen)}?alt=media`
   return (
+
     <div>
-      <Card className='m-4' border='primary' style={{ width: '320px', height: '335px' }}>
+      <Card className="m-4" border="primary" style={{ width: "320px", height: "335px" }}>
         <Card.Body>
           <Link to={`/productos/${encodeURIComponent(titulo)}`}>
-            <Card.Title> <span className='titulo'>{titulo}</span></Card.Title>
+            <Card.Title> <span className="titulo">{titulo}</span></Card.Title>
           </Link>
-          <div className='imagen'>
-            <Card.Img variant="top" style={{ width: '50%' }} src={imagen} />
+          <div className="imagen">
+            <img src={imagenUrl} alt={titulo} />
           </div>
-          <div className='descripcionPrecioDiv'>
-            <Card.Text className='descripcion'>
+          <div className="descripcionPrecioDiv">
+            <Card.Text className="descripcion">
               {descripcion}
             </Card.Text>
-            <Card.Text className='precio'>
+            <Card.Text className="precio">
               ${precio}
             </Card.Text>
           </div>

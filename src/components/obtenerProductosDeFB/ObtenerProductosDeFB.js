@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore"
-import { db } from '../../index'
+import { db } from "../../index"
 
 export async function obtenerProductosDesdeFirebase() {
   const productosCollection = collection(db, "productos")
