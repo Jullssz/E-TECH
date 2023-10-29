@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from '../itemListContainer/ItemListContainer';
+import ItemListContainer from '../itemListContainer/ItemListContainer';
 import './style.css'
 
 export default function Inicio() {
@@ -7,7 +7,7 @@ export default function Inicio() {
   return (
     <div>
       <h2 className='tituloInicio'>Bienvenido a E-TECH</h2>
-      <Cards />
+      <ItemListContainer />
     </div>
   )
 }

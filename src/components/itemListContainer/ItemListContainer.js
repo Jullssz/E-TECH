@@ -3,7 +3,7 @@ import Cardd from "../card/Card"
 import { AlmacenContext } from "../../context/AlmacenContext"
 import { obtenerProductosDesdeFirebase } from "../obtenerProductosDeFB/ObtenerProductosDeFB"
 
-export default function Cards() {
+export default function ItemListContainer() {
   const { productos, setProductos } = useContext(AlmacenContext)
   const [loading, setLoading] = useState(true)
 

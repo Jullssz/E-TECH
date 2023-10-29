@@ -6,7 +6,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75%;
+  height: 200px;
+}
+
+.imagen img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .descripcionPrecioDiv {

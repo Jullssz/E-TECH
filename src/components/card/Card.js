@@ -6,7 +6,7 @@ import './style.css'
 export default function Cardd({ producto }) {
   const { titulo, descripcion, imagen, precio } = producto
 
-  const imagenUrl = `https://firebasestorage.googleapis.com/v0/b/e-tech-d3586.appspot.com/o/${encodeURIComponent(imagen)}?alt=media`
+  const imagenUrl = imagen;
   return (
 
     <div>
