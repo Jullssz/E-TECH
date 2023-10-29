@@ -5,6 +5,7 @@ import './style.css'
 
 export default function Cardd({ producto }) {
   const { titulo, descripcion, imagen, precio } = producto
+  
   return (
     <div>
       <Card className='m-4' border='primary' style={{ width: '320px', height: '335px' }}>

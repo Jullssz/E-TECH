@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import Cardd from '../card/Card'
 import { AlmacenContext } from '../../context/AlmacenContext';
-import './style.css'
 
 export default function Cards() {
   const { productos } = useContext(AlmacenContext);

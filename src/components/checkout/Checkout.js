@@ -1,35 +1,35 @@
-import React, { useContext, useState } from 'react';
-import { AlmacenContext } from '../../context/AlmacenContext';
-import { db } from '../../index';
-import { collection, addDoc, Timestamp } from '@firebase/firestore';
+import React, { useContext, useState } from 'react'
+import { AlmacenContext } from '../../context/AlmacenContext'
+import { db } from '../../index'
+import { collection, addDoc, Timestamp } from '@firebase/firestore'
 import './style.css';
 
 export default function Checkout() {
-  const { carrito, setCarrito } = useContext(AlmacenContext);
-  const [nombre, setNombre] = useState('');
-  const [email, setEmail] = useState('');
-  const [telefono, setTelefono] = useState('');
-  const [nombreError, setNombreError] = useState('');
-  const [telefonoError, setTelefonoError] = useState('');
-  const [mensaje, setMensaje] = useState('');
-  const [mostrarMensaje, setMostrarMensaje] = useState(false);
+  const { carrito, setCarrito } = useContext(AlmacenContext)
+  const [nombre, setNombre] = useState('')
+  const [email, setEmail] = useState('')
+  const [telefono, setTelefono] = useState('')
+  const [nombreError, setNombreError] = useState('')
+  const [telefonoError, setTelefonoError] = useState('')
+  const [mensaje, setMensaje] = useState('')
+  const [mostrarMensaje, setMostrarMensaje] = useState(false)
 
   const handleNombreChange = (e) => {
 
-    setNombre(e.target.value);
+    setNombre(e.target.value)
     if (e.target.value.length >= 2) {
-      setNombreError('');
+      setNombreError('')
     } else {
-      setNombreError('El nombre debe tener al menos 2 caracteres.');
+      setNombreError('El nombre debe tener al menos 2 caracteres.')
     }
   };
 
   const handleTelefonoChange = (e) => {
-    setTelefono(e.target.value);
+    setTelefono(e.target.value)
     if (/^\d+$/.test(e.target.value) && e.target.value.length >= 8) {
-      setTelefonoError('');
+      setTelefonoError('')
     } else {
-      setTelefonoError('El número de teléfono debe contener al menos 8 dígitos y solo números.');
+      setTelefonoError('El número de teléfono debe contener al menos 8 dígitos y solo números.')
     }
   };
 
@@ -40,12 +40,12 @@ export default function Checkout() {
     fechaActual.setHours(fechaActual.getHours() - 3)
 
     if (nombre.length < 2 || telefono.length < 8) {
-      setMensaje('Por favor, completa todos los campos correctamente.');
-      setMostrarMensaje(true);
-      return;
+      setMensaje('Por favor, completa todos los campos correctamente.')
+      setMostrarMensaje(true)
+      return
     }
 
-    const ordenRef = collection(db, 'ordenes');
+    const ordenRef = collection(db, 'ordenes')
     const nuevaOrden = {
       nombre: nombre,
       email: email,
@@ -57,7 +57,7 @@ export default function Checkout() {
         titulo: producto.titulo,
         precio: producto.precio,
       })),
-    };
+    }
 
     try {
       const docRef = await addDoc(ordenRef, nuevaOrden)

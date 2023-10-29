@@ -1,0 +1,33 @@
+.faq {
+  width: 1000px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.pregunta {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.textoPregunta {
+  flex-grow: 1;
+}
+
+.respuesta {
+  display: none;
+  margin-top: 15px;
+}
+
+.respuesta.visible {
+  display: block;
+}
+
+.flecha {
+  margin-left: 10px;
+}
