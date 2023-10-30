@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { AlmacenContext } from '../../context/AlmacenContext'
 import { db } from '../../index'
 import { collection, addDoc, Timestamp } from '@firebase/firestore'
+import { Link } from 'react-router-dom'
 import './style.css';
 
 export default function Checkout() {
@@ -13,6 +14,8 @@ export default function Checkout() {
   const [telefonoError, setTelefonoError] = useState('')
   const [mensaje, setMensaje] = useState('')
   const [mostrarMensaje, setMostrarMensaje] = useState(false)
+  const [idOperacion, setIdOperacion] = useState('')
+
 
   const handleNombreChange = (e) => {
 
@@ -62,8 +65,9 @@ export default function Checkout() {
     try {
       const docRef = await addDoc(ordenRef, nuevaOrden)
       const idOperacion = docRef.id
+      setIdOperacion(idOperacion)
+
       setCarrito([])
-      window.location = `/confirmacion/${idOperacion}`
     } catch (e) {
       console.error('Error al agregar la orden: ', e)
     }
@@ -121,6 +125,7 @@ export default function Checkout() {
           <p>{mensaje}</p>
         </div>
       )}
+      {idOperacion && <Link className='irConfirmacion' to={`/confirmacion/${idOperacion}`}>Haz Click para ir a la confirmación</Link>}
     </div>
   );
 }
