@@ -127,5 +127,5 @@ export default function Checkout() {
       )}
       {idOperacion && <Link className='irConfirmacion' to={`/confirmacion/${idOperacion}`}>Haz Click para ir a la confirmación</Link>}
     </div>
-  );
+  )
 }
